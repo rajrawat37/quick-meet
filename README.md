@@ -1,2 +1,2 @@
 # quick-meet
-Next.js 14 + Stream-based video calling experience with responsive UI.
+A Zoom-inspired real-time video calling app built with Next.js 14, Stream, and Tailwind CSS.

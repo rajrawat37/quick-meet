@@ -6,10 +6,9 @@ const nextConfig: NextConfig = {
       ...(config.resolve.alias || {}),
       "@lib": require("path").resolve(__dirname, "lib"),
       "@components": require("path").resolve(__dirname, "components"),
-      // Add more aliases if needed
     };
     return config;
-  },
+},
 };
 
 export default nextConfig;

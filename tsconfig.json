@@ -20,9 +20,19 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./*"], // @/something for general root imports
+      "@lib/*": ["lib/*"], // @lib/something for lib imports
+      "@components/*": ["components/*"] // @components/something for components imports
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
+
+
+// ✅ Path aliases for Next.js
+// These aliases let Next.js (and your IDE) understand custom import paths.
+// Without this, VS Code will show "Cannot find module" errors during development.
+// "@" is set as an alias for the root directory.
+// "*" is a wildcard that matches any sub-path under the root.
+// ["./*"] maps everything under the root (project base) to the alias.  

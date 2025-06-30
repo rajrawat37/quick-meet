@@ -1,0 +1,26 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "typescript.format.enable": true,
+  "javascript.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  }
+}

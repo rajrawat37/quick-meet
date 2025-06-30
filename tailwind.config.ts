@@ -5,7 +5,7 @@ import type { Config } from 'tailwindcss';
 // We can also set it to 'false' which means it will not use the dark mode.
 
 
-const config = {
+const config: Config = {
   darkMode: 'class',
   content: [
     './pages/**/*.{ts,tsx}',
@@ -70,6 +70,6 @@ const config = {
     },
   },
   plugins: [require('tailwindcss-animate')],
-} satisfies Config;
+};
 
 export default config;

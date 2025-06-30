@@ -20,7 +20,7 @@ const sidebarLinks = [
         imgURL: "/icons/recordings.svg",
     },      
     {
-        label: "Add Personal",
+        label: "Personal Room",
         route: "/personal-room",
         imgURL: "/icons/add-personal.svg",
     },    

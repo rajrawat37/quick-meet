@@ -1,4 +1,4 @@
-import React from 'react'
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -16,8 +16,9 @@ const Navbar = () => {
         </p>
       </a>
       <div className="flex-between gap-5">
-            {/* Clerk User Management */}
-          
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </nav>
   );

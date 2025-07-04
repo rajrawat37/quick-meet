@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+
+console.log("🌟 ROOT LAYOUT EXECUTING 🌟");
+console.log("🔥 This is the layout file getting executed before the request is made 🔥");
+console.log("📅 Layout timestamp:", new Date().toISOString());
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main>
+    <main className='Testing-Main'>
       {children}
     </main>
   )

@@ -3,7 +3,9 @@ import Sidebar from '@/components/Sidebar'
 import React from 'react'
 
 export default function HomeLayout({ children }: { children: React.ReactNode }) {
+  console.log("Root 3 Layout children:", children);
   return (
+    
     <main className='relative'>
       <Navbar />
       <div className="flex">

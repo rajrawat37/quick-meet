@@ -4,14 +4,33 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import HomeCard from './HomeCard';
 import MeetingModal from './MeetingModal';
+import { useUser } from '@clerk/nextjs';
+import { useStreamVideoClient } from '@stream-io/video-react-sdk';
 
 const MeetingTypeList = () => {
 
   const router = useRouter();
   const [meetingState, setMeetingState] = useState<'isScheduleMeeting' | 'isJoiningMeeting' | 'isInstantMeeting' | undefined>();
 
-  const createMeeting = () => {
+  const {user} = useUser();
+  const client = useStreamVideoClient();
 
+  const createMeeting = async () => {
+    if (!client || !user) return;
+
+    try{
+      const callType = 'default';
+      const id =crypto.randomUUID(); // crypto is a browser API and randomUUID is a method that generates a random UUID
+      
+      const call = client.call(callType, id);
+
+      if(!call) throw new Error("Failed to create call");
+
+
+      
+    }catch(error){
+      console.error("Error creating meeting:", error);
+    }
   }
 
   return (

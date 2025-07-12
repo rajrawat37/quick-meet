@@ -30,7 +30,7 @@ export const StreamVideoProvider = ({ children }: { children: React.ReactNode })
       },
       tokenProvider: tokenProvider,
     })
-    setVideoClient(client)
+    setVideoClient(client);
   }, [user, isLoaded])
 
   if (!videoClient) return <Loader />;

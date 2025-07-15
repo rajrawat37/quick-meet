@@ -1,10 +1,3 @@
-//         Part 1                        Part 2
-// (Object Destructuring)     (TypeScript Type Annotation)
-// "Give me the 'params'    "The object you receive will look
-//  property"                like this"
-//      ▼                           ▼
-// ({params})         : {params: Promise<{ id: string }>}
-
 'use client'
 
 import MeetingRoom from "@/components/ui/MeetingRoom";
@@ -12,14 +5,15 @@ import MeetingSetup from "@/components/ui/MeetingSetup";
 import { useGetCallById } from "@/hooks/useGetCallById";
 import { useUser } from "@clerk/nextjs";
 import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
+import { useParams } from "next/navigation";
 import { useState } from "react";
 
-export default async function Meeting({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+const MeetingPage = () => {
+  const { id } = useParams();
   const { user, isLoaded } = useUser();
 
   const [isSetupComplete, setIsSetupComplete] = useState(false);
-  const { call, isCallLoading } = await useGetCallById(id);
+  const { call, isCallLoading } = useGetCallById(id as string);
 
   if (!isLoaded || isCallLoading) return <div>Loading...</div>;
 
@@ -29,7 +23,7 @@ export default async function Meeting({ params }: { params: Promise<{ id: string
       <StreamCall call={call}>
         <StreamTheme>
           {!isSetupComplete ? (
-            <MeetingSetup />
+            <MeetingSetup setIsSetupComplete={setIsSetupComplete} />
           ) : (
             <MeetingRoom />
           )}
@@ -39,3 +33,5 @@ export default async function Meeting({ params }: { params: Promise<{ id: string
     </main>
   );
 }
+
+export default MeetingPage;

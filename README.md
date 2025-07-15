@@ -44,31 +44,6 @@
 - **🎯 Lucide React** - Modern icon library
 - **♿ Radix UI** - Accessible UI primitives
 
-## 🏗️ Architecture Overview
-
-🎯 **Modern Video Calling Architecture**
-
-📱 **Frontend Layer**
-- ⚛️ Next.js 15 with App Router
-- 🎨 Tailwind CSS + Shadcn/UI
-- 📋 TypeScript for type safety
-
-🔐 **Authentication & Security**
-- 🛡️ Clerk for user management
-- 🔑 Secure sign-in/sign-up flow
-- 👤 User session management
-
-📹 **Video Infrastructure**
-- 🎥 Stream Video SDK integration
-- 🌐 Real-time communication
-- 📊 Call state management
-
-🧩 **Core Components**
-- 🏠 Home Dashboard with meeting options
-- 🎬 Meeting Room with video controls
-- 👥 Call List for meeting history
-- ⚙️ Device Settings for audio/video
-
 ### Application Structure
 ```
 ├── app/                    # Next.js App Router
@@ -150,14 +125,6 @@ NEXT_PUBLIC_BASE_URL=http://localhost:3000
 2. **🔢 Via ID**: Enter meeting ID on the home page
 3. **📊 From Dashboard**: Click "Join" on upcoming meetings
 
-### 🎛️ Meeting Controls
-- **📹 Camera**: Toggle video on/off
-- **🎤 Microphone**: Mute/unmute audio
-- **🖥️ Screen Share**: Share your screen
-- **👥 Participants**: View meeting attendees
-- **👋 Leave**: End the meeting
-
-## 🔧 Development
 
 ### 🧩 Key Components
 

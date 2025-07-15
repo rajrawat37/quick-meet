@@ -46,7 +46,83 @@ A modern, full-featured video calling application built with Next.js 15, Stream 
 
 ## 📱 Architecture
 
-![Architecture Diagram](./architecture-diagram.png)
+```mermaid
+graph TD
+    %% User Layer
+    A[User] --> B[Web Browser]
+    
+    %% Frontend Layer
+    B --> C[Next.js 15 App]
+    
+    %% Authentication
+    C --> D[Clerk Authentication]
+    D --> E[Sign In/Sign Up Pages]
+    
+    %% Main Application
+    C --> F[App Router]
+    F --> G[Home Dashboard]
+    F --> H[Meeting Room]
+    F --> I[Personal Room]
+    
+    %% Components Layer
+    G --> J[MeetingTypeList]
+    G --> K[CallList]
+    K --> L[MeetingCard]
+    
+    H --> M[MeetingSetup]
+    H --> N[MeetingRoom]
+    M --> O[DeviceSettings]
+    N --> P[Video Controls]
+    
+    %% UI Components
+    J --> Q[MeetingModal]
+    L --> R[Toast Notifications]
+    
+    %% Backend Services
+    C --> S[Stream Video SDK]
+    S --> T[Video Infrastructure]
+    S --> U[Real-time Communication]
+    
+    %% Data Layer
+    C --> V[Custom Hooks]
+    V --> W[useGetCalls]
+    V --> X[useGetCallById]
+    
+    %% External Services
+    D --> Y[Clerk API]
+    S --> Z[Stream API]
+    
+    %% Styling & UI
+    C --> AA[Tailwind CSS]
+    C --> AB[Shadcn/UI Components]
+    R --> AC[Sonner Toast]
+    
+    %% Meeting Flow
+    J --> |Create Meeting| Q
+    Q --> |Instant/Scheduled| S
+    L --> |Join Meeting| H
+    M --> |Setup Complete| N
+    
+    %% Data Flow
+    W --> |Fetch Calls| Z
+    X --> |Get Call Data| Z
+    Y --> |User Data| G
+    
+    %% Styling
+    classDef userLayer fill:#e1f5fe
+    classDef frontend fill:#f3e5f5
+    classDef auth fill:#fff3e0
+    classDef components fill:#e8f5e8
+    classDef services fill:#fff8e1
+    classDef external fill:#fce4ec
+    
+    class A,B userLayer
+    class C,F,G,H,I frontend
+    class D,E,Y auth
+    class J,K,L,M,N,O,P,Q,R components
+    class S,T,U,V,W,X services
+    class Y,Z external
+```
 
 ### Application Structure
 ```

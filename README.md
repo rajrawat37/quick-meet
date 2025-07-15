@@ -113,18 +113,6 @@ NEXT_PUBLIC_BASE_URL=http://localhost:3000
 5. **🌍 Open the application**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📖 Usage
-
-### 🎬 Creating a Meeting
-1. **⚡ Instant Meeting**: Click "New Meeting" → "Start an instant meeting"
-2. **📅 Scheduled Meeting**: Click "New Meeting" → "Schedule Meeting" → Set date/time
-3. **🏠 Personal Room**: Access your dedicated meeting room anytime
-
-### 🔗 Joining a Meeting
-1. **🌐 Via Link**: Click on a meeting invitation link
-2. **🔢 Via ID**: Enter meeting ID on the home page
-3. **📊 From Dashboard**: Click "Join" on upcoming meetings
-
 ### 🎣 Custom Hooks
 
 #### 📡 useGetCalls

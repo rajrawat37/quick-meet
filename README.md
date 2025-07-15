@@ -125,23 +125,6 @@ NEXT_PUBLIC_BASE_URL=http://localhost:3000
 2. **🔢 Via ID**: Enter meeting ID on the home page
 3. **📊 From Dashboard**: Click "Join" on upcoming meetings
 
-
-### 🧩 Key Components
-
-#### 🎬 MeetingSetup
-- ⚙️ Pre-meeting configuration
-- 📹 Device settings (camera/microphone)
-- 👀 Meeting preview
-
-#### 🎥 MeetingRoom
-- 🖥️ Main video call interface
-- 👥 Participant management
-- 🎛️ Meeting controls
-
-#### 📋 CallList
-- 📊 Display meetings by type (upcoming, ended, recordings)
-- 🔍 Filter and manage meeting history
-
 ### 🎣 Custom Hooks
 
 #### 📡 useGetCalls
@@ -151,11 +134,6 @@ NEXT_PUBLIC_BASE_URL=http://localhost:3000
 #### 🔍 useGetCallById
 - 📄 Retrieve specific meeting information
 - 🎥 Stream SDK integration
-
-### 🏪 State Management
-- ⚛️ React hooks for local state
-- 🎥 Stream SDK for call state
-- 🔐 Clerk for authentication state
 
 ## 🚀 Deployment
 

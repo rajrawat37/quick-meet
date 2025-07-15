@@ -1,128 +1,73 @@
-# Quick Meet - Next.js Video Calling Application
+# 🚀 Quick Meet - Next.js Video Calling Application
 
-A modern, full-featured video calling application built with Next.js 15, Stream Video SDK, and Clerk authentication. Quick Meet provides seamless video conferencing capabilities with a beautiful, responsive interface.
+✨ A modern, full-featured video calling application built with Next.js 15, Stream Video SDK, and Clerk authentication. Quick Meet provides seamless video conferencing capabilities with a beautiful, responsive interface. 💫
 
 ## 🚀 Features
 
-### Core Video Calling
-- **Instant Meetings**: Start video calls immediately
-- **Scheduled Meetings**: Plan and schedule future meetings
-- **Personal Room**: Each user gets a dedicated meeting room
-- **Meeting Join**: Join meetings via link or meeting ID
+### 🎥 Core Video Calling
+- **⚡ Instant Meetings**: Start video calls immediately
+- **📅 Scheduled Meetings**: Plan and schedule future meetings  
+- **🏠 Personal Room**: Each user gets a dedicated meeting room
+- **🔗 Meeting Join**: Join meetings via link or meeting ID
 
-### Meeting Management
-- **Upcoming Meetings**: View and manage scheduled meetings
-- **Meeting History**: Access previous meetings and recordings
-- **Recording Playback**: View recorded meeting sessions
-- **Meeting Controls**: Mute/unmute, camera on/off, screen sharing
+### 📊 Meeting Management
+- **⏰ Upcoming Meetings**: View and manage scheduled meetings
+- **📚 Meeting History**: Access previous meetings and recordings
+- **🎬 Recording Playback**: View recorded meeting sessions
+- **🎛️ Meeting Controls**: Mute/unmute, camera on/off, screen sharing
 
-### User Experience
-- **Authentication**: Secure login with Clerk
-- **Responsive Design**: Works on desktop, tablet, and mobile
-- **Toast Notifications**: Real-time feedback with Sonner
-- **Copy Meeting Links**: Easy sharing of meeting invitations
-- **Device Settings**: Configure camera and microphone preferences
+### 💎 User Experience
+- **🔐 Authentication**: Secure login with Clerk
+- **📱 Responsive Design**: Works on desktop, tablet, and mobile
+- **🎉 Toast Notifications**: Real-time feedback with Sonner
+- **📋 Copy Meeting Links**: Easy sharing of meeting invitations
+- **⚙️ Device Settings**: Configure camera and microphone preferences
 
 ## 🛠 Tech Stack
 
-### Frontend
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first CSS framework
-- **Shadcn/ui** - Modern UI component library
+### 💻 Frontend
+- **⚛️ Next.js 15** - React framework with App Router
+- **📝 TypeScript** - Type-safe development
+- **🎨 Tailwind CSS** - Utility-first CSS framework
+- **✨ Shadcn/ui** - Modern UI component library
 
-### Video & Real-time
-- **Stream Video SDK** - Video calling infrastructure
-- **Stream React SDK** - React components for video
+### 📹 Video & Real-time
+- **🎥 Stream Video SDK** - Video calling infrastructure
+- **⚛️ Stream React SDK** - React components for video
 
-### Authentication & Backend
-- **Clerk** - User authentication and management
-- **Next.js API Routes** - Server-side functionality
+### 🔐 Authentication & Backend
+- **🛡️ Clerk** - User authentication and management
+- **🔗 Next.js API Routes** - Server-side functionality
 
-### UI & Notifications
-- **Sonner** - Beautiful toast notifications
-- **Lucide React** - Modern icon library
-- **Radix UI** - Accessible UI primitives
+### 🎭 UI & Notifications
+- **🎉 Sonner** - Beautiful toast notifications
+- **🎯 Lucide React** - Modern icon library
+- **♿ Radix UI** - Accessible UI primitives
 
-## 📱 Architecture
+## 🏗️ Architecture Overview
 
-```mermaid
-graph TD
-    %% User Layer
-    A[User] --> B[Web Browser]
-    
-    %% Frontend Layer
-    B --> C[Next.js 15 App]
-    
-    %% Authentication
-    C --> D[Clerk Authentication]
-    D --> E[Sign In/Sign Up Pages]
-    
-    %% Main Application
-    C --> F[App Router]
-    F --> G[Home Dashboard]
-    F --> H[Meeting Room]
-    F --> I[Personal Room]
-    
-    %% Components Layer
-    G --> J[MeetingTypeList]
-    G --> K[CallList]
-    K --> L[MeetingCard]
-    
-    H --> M[MeetingSetup]
-    H --> N[MeetingRoom]
-    M --> O[DeviceSettings]
-    N --> P[Video Controls]
-    
-    %% UI Components
-    J --> Q[MeetingModal]
-    L --> R[Toast Notifications]
-    
-    %% Backend Services
-    C --> S[Stream Video SDK]
-    S --> T[Video Infrastructure]
-    S --> U[Real-time Communication]
-    
-    %% Data Layer
-    C --> V[Custom Hooks]
-    V --> W[useGetCalls]
-    V --> X[useGetCallById]
-    
-    %% External Services
-    D --> Y[Clerk API]
-    S --> Z[Stream API]
-    
-    %% Styling & UI
-    C --> AA[Tailwind CSS]
-    C --> AB[Shadcn/UI Components]
-    R --> AC[Sonner Toast]
-    
-    %% Meeting Flow
-    J --> |Create Meeting| Q
-    Q --> |Instant/Scheduled| S
-    L --> |Join Meeting| H
-    M --> |Setup Complete| N
-    
-    %% Data Flow
-    W --> |Fetch Calls| Z
-    X --> |Get Call Data| Z
-    Y --> |User Data| G
-    
-    %% Styling
-    classDef userLayer fill:#e1f5fe
-    classDef frontend fill:#f3e5f5
-    classDef auth fill:#fff3e0
-    classDef components fill:#e8f5e8
-    classDef services fill:#fff8e1
-    classDef external fill:#fce4ec
-    
-    class A,B userLayer
-    class C,F,G,H,I frontend
-    class D,E,Y auth
-    class J,K,L,M,N,O,P,Q,R components
-    class S,T,U,V,W,X services
-    class Y,Z external
-```
+🎯 **Modern Video Calling Architecture**
+
+📱 **Frontend Layer**
+- ⚛️ Next.js 15 with App Router
+- 🎨 Tailwind CSS + Shadcn/UI
+- 📋 TypeScript for type safety
+
+🔐 **Authentication & Security**
+- 🛡️ Clerk for user management
+- 🔑 Secure sign-in/sign-up flow
+- 👤 User session management
+
+📹 **Video Infrastructure**
+- 🎥 Stream Video SDK integration
+- 🌐 Real-time communication
+- 📊 Call state management
+
+🧩 **Core Components**
+- 🏠 Home Dashboard with meeting options
+- 🎬 Meeting Room with video controls
+- 👥 Call List for meeting history
+- ⚙️ Device Settings for audio/video
 
 ### Application Structure
 ```
@@ -145,142 +90,119 @@ graph TD
 
 ## 🚦 Getting Started
 
-### Prerequisites
-- **Node.js** 18+ and npm
-- **Clerk** account for authentication
-- **Stream** account for video calling
+### 📋 Prerequisites
+- **📦 Node.js** 18+ and npm
+- **🔐 Clerk** account for authentication
+- **🎥 Stream** account for video calling
 
-### Environment Variables
+### 🔧 Environment Variables
 Create a `.env.local` file in the root directory:
 
 ```env
-# Clerk Authentication
+# 🔐 Clerk Authentication
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 CLERK_SECRET_KEY=your_clerk_secret_key
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
-# Stream Video
+# 🎥 Stream Video
 NEXT_PUBLIC_STREAM_API_KEY=your_stream_api_key
 STREAM_SECRET_KEY=your_stream_secret_key
 
-# Application
+# 🌐 Application
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
 ```
 
-### Installation
+### 📥 Installation
 
-1. **Clone the repository**
+1. **📁 Clone the repository**
    ```bash
    git clone https://github.com/rajrawat37/quick-meet-nextjs.git
    cd quick-meet-nextjs
    ```
 
-2. **Install dependencies**
+2. **📦 Install dependencies**
    ```bash
    npm install
    ```
 
-3. **Set up environment variables**
+3. **⚙️ Set up environment variables**
    - Copy `.env.example` to `.env.local`
    - Fill in your Clerk and Stream credentials
 
-4. **Run the development server**
+4. **🚀 Run the development server**
    ```bash
    npm run dev
    ```
 
-5. **Open the application**
+5. **🌍 Open the application**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ## 📖 Usage
 
-### Creating a Meeting
-1. **Instant Meeting**: Click "New Meeting" → "Start an instant meeting"
-2. **Scheduled Meeting**: Click "New Meeting" → "Schedule Meeting" → Set date/time
-3. **Personal Room**: Access your dedicated meeting room anytime
+### 🎬 Creating a Meeting
+1. **⚡ Instant Meeting**: Click "New Meeting" → "Start an instant meeting"
+2. **📅 Scheduled Meeting**: Click "New Meeting" → "Schedule Meeting" → Set date/time
+3. **🏠 Personal Room**: Access your dedicated meeting room anytime
 
-### Joining a Meeting
-1. **Via Link**: Click on a meeting invitation link
-2. **Via ID**: Enter meeting ID on the home page
-3. **From Dashboard**: Click "Join" on upcoming meetings
+### 🔗 Joining a Meeting
+1. **🌐 Via Link**: Click on a meeting invitation link
+2. **🔢 Via ID**: Enter meeting ID on the home page
+3. **📊 From Dashboard**: Click "Join" on upcoming meetings
 
-### Meeting Controls
-- **Camera**: Toggle video on/off
-- **Microphone**: Mute/unmute audio
-- **Screen Share**: Share your screen
-- **Participants**: View meeting attendees
-- **Leave**: End the meeting
+### 🎛️ Meeting Controls
+- **📹 Camera**: Toggle video on/off
+- **🎤 Microphone**: Mute/unmute audio
+- **🖥️ Screen Share**: Share your screen
+- **👥 Participants**: View meeting attendees
+- **👋 Leave**: End the meeting
 
 ## 🔧 Development
 
-### Key Components
+### 🧩 Key Components
 
-#### MeetingSetup
-- Pre-meeting configuration
-- Device settings (camera/microphone)
-- Meeting preview
+#### 🎬 MeetingSetup
+- ⚙️ Pre-meeting configuration
+- 📹 Device settings (camera/microphone)
+- 👀 Meeting preview
 
-#### MeetingRoom
-- Main video call interface
-- Participant management
-- Meeting controls
+#### 🎥 MeetingRoom
+- 🖥️ Main video call interface
+- 👥 Participant management
+- 🎛️ Meeting controls
 
-#### CallList
-- Display meetings by type (upcoming, ended, recordings)
-- Filter and manage meeting history
+#### 📋 CallList
+- 📊 Display meetings by type (upcoming, ended, recordings)
+- 🔍 Filter and manage meeting history
 
-### Custom Hooks
+### 🎣 Custom Hooks
 
-#### useGetCalls
-- Fetch and filter meeting data
-- Handle loading and error states
+#### 📡 useGetCalls
+- 📊 Fetch and filter meeting data
+- ⏳ Handle loading and error states
 
-#### useGetCallById
-- Retrieve specific meeting information
-- Stream SDK integration
+#### 🔍 useGetCallById
+- 📄 Retrieve specific meeting information
+- 🎥 Stream SDK integration
 
-### State Management
-- React hooks for local state
-- Stream SDK for call state
-- Clerk for authentication state
+### 🏪 State Management
+- ⚛️ React hooks for local state
+- 🎥 Stream SDK for call state
+- 🔐 Clerk for authentication state
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect repository to Vercel
-3. Configure environment variables
-4. Deploy automatically
+### 🚀 Vercel (Recommended)
+1. 📤 Push your code to GitHub
+2. 🔗 Connect repository to Vercel
+3. ⚙️ Configure environment variables
+4. 🎉 Deploy automatically
 
-### Environment Setup
-- Set production URLs in environment variables
-- Configure Clerk and Stream for production
-- Update CORS settings if needed
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Stream** for the excellent video calling SDK
-- **Clerk** for seamless authentication
-- **Vercel** for hosting and deployment
-- **Next.js team** for the amazing framework
-
-## 📞 Support
-
-For support, email [your-email@example.com] or open an issue on GitHub.
+### 🌍 Environment Setup
+- 🔧 Set production URLs in environment variables
+- ⚙️ Configure Clerk and Stream for production
+- 🛡️ Update CORS settings if needed
 
 ---
 
-**Built with ❤️ using Next.js and Stream Video SDK**
+**✨ Built with ❤️ using Next.js and Stream Video SDK 🚀**
